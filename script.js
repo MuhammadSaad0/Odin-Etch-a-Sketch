@@ -19,25 +19,18 @@ function destroygrid() {
 creategrid(cols);
 let toggle = false;
 let newdi = document.querySelectorAll(".container-items");
-function draw() {
-    for (let i = 0; i < cols * cols; i++) {
-        newdi[i].addEventListener("click", function () {
-            toggle = !toggle; /*when mouse clicks toggle = true which allows drawing, click again and toggle = false which prevents drawing*/
-        })
-        newdi[i].addEventListener("mouseover", function () {
-            if (toggle == true) {
-                newdi[i].classList.add("sketch");
-            }
-        });
+function draw(e) {
+    if (e.target.className == "container-items") {
+        e.target.style.setProperty("background-color", "black");
     }
 }
-draw();
+function clear() {
+    destroygrid();
+    creategrid(cols);
+}
+container.addEventListener("mouseover", draw);
 let clearbtn = document.querySelector("#clear");
-clearbtn.addEventListener("click", function () {
-    for (let i = 0; i < newdi.length; i++) {
-        newdi[i].classList.remove("sketch");
-    }
-})
+clearbtn.addEventListener("click", clear);
 let gridsize = document.getElementById("size").value;
 console.log(gridsize);
 let resizebtn = document.querySelector("#gridchange");

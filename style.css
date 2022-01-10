@@ -14,17 +14,18 @@ body{
     text-align: center;
 }
 #container{
-    width: 650px;
-    height: 650px;
+    height:650px;
+    width:650px;
     padding:100px;
     display:grid;
     grid-template-columns: repeat(var(--cols), minmax(0,1fr));
     grid-template-rows: repeat(var(--cols),minmax(0,1fr));
+
     
 }
 .container-items{
     background: white;
-    padding:1em;
+
     outline: 1px solid red;
     
 }
@@ -33,6 +34,7 @@ body{
 }
 #box1{
     display: inline-flex;
+    justify-content: space-evenly;
 }
 #clear{
     border-radius:5%;
@@ -43,6 +45,11 @@ body{
     font-weight: 600;
     color:red;
 }
+#clear:hover{
+    box-shadow: 5px 5px 5px red;
+    transform: scale(1.1);
+}
+
 #ui{
     color:red;
     font-size:18px;
@@ -53,6 +60,7 @@ body{
     text-align: center;
 }
 #gridchange{
+    font-family: monospace;
     border-radius:5%;
     width:100px;
     height:70px;
@@ -61,4 +69,14 @@ body{
     font-weight: 600;
     color:red;
     
+}
+#gridchange:hover{
+    box-shadow: 5px 5px 5px red;
+    transform: scale(1.1);
+}
+#container:hover{
+    transform: scale(1.05);
+}
+#size:hover{
+    transform: scale(1.05);
 }
