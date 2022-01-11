@@ -17,7 +17,7 @@ function destroygrid() {
     }
 }
 creategrid(cols);
-let toggle = false;
+let toggle = true;
 let newdi = document.querySelectorAll(".container-items");
 function draw(e) {
     if (e.target.className == "container-items") {
@@ -34,7 +34,7 @@ function clear() {
     destroygrid();
     creategrid(cols);
 }
-container.addEventListener("click", togglefunc);
+/*container.addEventListener("click", togglefunc);*/
 container.addEventListener("mouseover", draw);
 container.addEventListener("touchmove", draw);
 let clearbtn = document.querySelector("#clear");
