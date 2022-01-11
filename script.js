@@ -21,14 +21,22 @@ let toggle = false;
 let newdi = document.querySelectorAll(".container-items");
 function draw(e) {
     if (e.target.className == "container-items") {
-        e.target.style.setProperty("background-color", "black");
+        let colorselect = document.querySelector("#color").value;
+        if (toggle) {
+            e.target.style.setProperty("background-color", colorselect);
+        }
     }
+}
+function togglefunc() {
+    toggle = !toggle;
 }
 function clear() {
     destroygrid();
     creategrid(cols);
 }
+container.addEventListener("click", togglefunc);
 container.addEventListener("mouseover", draw);
+container.addEventListener("ontouchmove", draw);
 let clearbtn = document.querySelector("#clear");
 clearbtn.addEventListener("click", clear);
 let gridsize = document.getElementById("size").value;

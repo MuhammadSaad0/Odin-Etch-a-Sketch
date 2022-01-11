@@ -8,14 +8,17 @@
     </head>
     <body>
         <div id = "header">
-            <h2>Etch-a-Sketch</h2>
+            <h2 id = "heading">Etch-a-Sketch</h2>
+            <h5 id = "instr">Click once on grid to toggle drawing, click again to stop</h5>
         </div>
         <div id = "box1">
         <div id = "container">
         </div>
         <div id = "ui">
             <button type = "button" id = "clear">CLEAR</button>
-            <label for = "Grid-size">Select Gride Size (Y x Y pixels)</label>
+            <label for = "color-pick" id = "l1">Pick Color</label>
+            <input type = "color" id = "color" name = "color-pick" value = "#000000">
+            <label for = "Grid-size" id = "l2">Select Gride Size (Y x Y pixels)</label>
             <input type = "range" id = "size" name = "Grid-size" min = "1" max = "80" value = "16">
             <button type = "button" id = "gridchange">Change</button>
         </div>

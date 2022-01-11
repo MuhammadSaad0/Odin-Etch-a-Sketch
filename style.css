@@ -34,12 +34,10 @@ body{
 }
 #box1{
     display: inline-flex;
-    justify-content: space-evenly;
 }
 #clear{
     border-radius:5%;
     width:100px;
-    margin-bottom:9em;
     height:70px;
     font-size: 24px;
     font-weight: 600;
@@ -53,12 +51,15 @@ body{
 #ui{
     color:red;
     font-size:18px;
+    height:700px;
     display:flex;
+    gap:2.3em;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+
 #gridchange{
     font-family: monospace;
     border-radius:5%;
@@ -68,14 +69,31 @@ body{
     font-size: 24px;
     font-weight: 600;
     color:red;
+    margin-top: -30px;
     
 }
+#heading{
+    background-color: white;
+}
+#instr{
+    background-color: white;
+    margin-bottom: -20px;
+}
+#l1{
+    margin-bottom: -30px;
+    margin-top: 15px;
+}
+#l2{
+    margin-bottom: -30px;
+    margin-top: 15px;
+}
+
 #gridchange:hover{
     box-shadow: 5px 5px 5px red;
     transform: scale(1.1);
 }
 #container:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 #size:hover{
     transform: scale(1.05);
