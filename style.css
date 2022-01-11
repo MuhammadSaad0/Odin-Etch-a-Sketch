@@ -3,9 +3,9 @@
 
 }
 body{
-    background-color: black;
     font-family: monospace;
     min-width: 0;
+    background-image: url("./images/darkness.png");
 
 }
 #header{
@@ -50,6 +50,7 @@ body{
 
 #ui{
     color:red;
+    background-image: url("./images/carbon_fibre.png");
     font-size:18px;
     height:700px;
     display:flex;
@@ -58,6 +59,11 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-style:groove;
+    border-color: red;
+    height:450px;
+    width:450px;
+    margin-top:200px;
 }
 
 #gridchange{
@@ -97,4 +103,11 @@ body{
 }
 #size:hover{
     transform: scale(1.05);
+}
+#footer{
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    margin-top: auto;
 }
