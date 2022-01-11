@@ -36,7 +36,7 @@ function clear() {
 }
 container.addEventListener("click", togglefunc);
 container.addEventListener("mouseover", draw);
-container.addEventListener("ontouchmove", draw);
+container.addEventListener("touchmove", draw);
 let clearbtn = document.querySelector("#clear");
 clearbtn.addEventListener("click", clear);
 let gridsize = document.getElementById("size").value;
